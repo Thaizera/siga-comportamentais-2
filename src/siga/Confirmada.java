@@ -2,6 +2,11 @@ package siga;
 
 public class Confirmada implements EstadoMatricula {
     @Override
+    public void concluir(Matricula matricula) {
+        matricula.mudarPara(new Concluida());
+    }
+
+    @Override
     public String nome() {
         return "CONFIRMADA";
     }
